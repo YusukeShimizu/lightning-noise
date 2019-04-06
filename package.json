@@ -1,0 +1,30 @@
+{
+  "name": "lightning-noise",
+  "version": "1.0.0",
+  "description": "Noise protocol lightning network implimentation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/noise-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YusukeShimizu/lightning-noise.git"
+  },
+  "keywords": [
+    "lightning",
+    "noise"
+  ],
+  "author": "YusukeShimizu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YusukeShimizu/lightning-noise/issues"
+  },
+  "homepage": "https://github.com/YusukeShimizu/lightning-noise#readme",
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  },
+  "dependencies": {
+    "bcrypto": "^3.1.0",
+    "bsert": "0.0.10"
+  }
+}
