@@ -1,2 +1,2 @@
-const {Noise} = require('./Lain/noise');
+const {Noise} = require('./Noise/noise');
 module.exports = Noise;
