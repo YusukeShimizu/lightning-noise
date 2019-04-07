@@ -2,6 +2,38 @@
 
 The [Noise Protocol Framework](http://noiseprotocol.org/noise.html) implementation for lightning network.
 
+## Usage
+
+```js
+
+const Noise = require('lightning-noise');
+const net = require( 'net' );
+
+const initiator = new Noise();
+const staticPriv = initiator.generateKey();
+
+initiator.initState(
+  true,
+  'lightning',
+  Buffer.from(staticPriv, 'hex'),
+  Buffer.from('03021c5f5f57322740e4ee6936452add19dc7ea7ccf90635f95119ab82a62ae268', 'hex')
+);
+
+const client = new net.Socket();
+
+const host = 'xxx.xxx.xxx.xxx';
+const port = 9735;
+
+client.connect( port, host, function(){
+  client.write( initiator.genActOne() );
+});
+
+client.on( 'data', function( data ){
+  initiator.recvActTwo(Buffer.from(data, 'hex'));
+  ...
+
+```
+
 #### LICENSE
 
 Copyright 2019 Yusuke Shimizu
