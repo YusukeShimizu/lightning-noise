@@ -30,7 +30,7 @@ const ZERO_PUB = Buffer.alloc(33, 0x00);
 const EMPTY = Buffer.alloc(0);
 
 const PROTOCOL_NAME = 'Noise_XK_secp256k1_ChaChaPoly_SHA256';
-const PROLOGUE = 'hns';
+const PROLOGUE = 'lightning';
 const ROTATION_INTERVAL = 1000;
 const VERSION = 0;
 const ACT_ONE_SIZE = 50;
